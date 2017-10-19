@@ -1,0 +1,35 @@
+Como a visualização de um diff entre duas versões de um arquivo ajuda você a ver o bug que foi introduzido?
+
+    Ao digitar FC (ou Diff) e o nome do primeiro arquivo seguido do
+    nome do segundo arquivo, é possível comparar os dois arquivos (no
+    caso, as duas versões), sendo que só são apresentadas as diferenças
+    entre as versões, em seções. 
+
+Como ter fácil acesso a todo o histórico de um arquivo pode torná-lo um programador mais
+eficiente no longo prazo?
+
+    É que, caso a nova versão esteja com bug, é possível comparar com a versão mais antiga e encontrar mais rapidamente a diferença, resultando em maior eficiência na programação.
+
+Na sua opinião, quais são os prós e contras de escolher manualmente
+quando criar um commit, como ocorre no Git, v. o salvamento automático
+de versões, como no Google Docs?
+
+    O salvamento automático vai salvar muito mais versões que o necessário, e mesmo se só estiver salvando quando houver um alteração ao longo da hora, é provável que se salvem pontos que não façam sentido. Porém, para quem é meio esquecido e não salva o código com bastante frequência, ele pode fornecer mais detalhes do que se teria conseguido. Já a escolha manual de quando se criar um commit possui desvantagem potencial de erro do usuário, que não salva com frequência suficiente ou salva demais, todavia oferece muita flexibilidade, pois é possível que o programador padronize seu salvamento por alteração lógica.
+
+Por que você acha que alguns sistemas de controle de versão, como o Git, permitem salvar vários
+arquivos em um commit, enquanto outros, como o Google Docs, tratam cada arquivo separadamente?
+
+    Porque são voltados para códigos enquanto outros como Google Docs são voltados para arquivos diversos.
+
+Como usar os comandos git log e git diff para visualizar o histórico dos arquivos?
+
+    Primeiramente deve-se acessar o diretório onde está armazenado o repositório usando o comando cd asteroids, em seguida deve-se digitar git log. Ao verificar quais commits se quer analisar, digita-se q para sair do log e digita-se o comando git diff mais o commit mais antigo seguido do commit mais atual.
+
+De que modo o controle de versão pode dar a você mais segurança para fazer alterações que
+podem danificar algo?
+
+    É que é possível retomar uma versão anterior à que fiz a alteração, utilizando o comando git checkout mais a ID que eu quero retomar. E para voltar à última versão, basta digitar novamente git checkout mais a ID do commit mais atual.
+
+Agora que você já configurou a sua área de trabalho, você quer usar o Git para quê?
+
+    Quero utilizá-lo para ter mais eficiência em minha programação e arriscar mais alterando meus programas sem medo de perder todo o histórico ou de modificá-lo todo sem poder voltar atrás.
