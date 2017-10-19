@@ -1,0 +1,22 @@
+O que acontece ao iniciar um repositório? Por que você precisa fazer isso?
+
+	Ao digitar o comando git init (no diretório escolhido), é criado o repositório, porém sem nenhum commit. É preciso fazer isso para que seja possível criar os commits.
+
+Em que se difere a área de preparação do diretório de trabalho e do repositório?
+Qual valor você acha que ela oferece?
+
+	A área de preparação do diretório de trabalho serve para receber a prévia do commit, já o repositório recebe o commit consolidado, o que é importante para permitir a correção de equívocos como a adição de arquivos desnecessários, utilizando o comando GIT RESET mais o nome do arquivo.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges
+manually?
