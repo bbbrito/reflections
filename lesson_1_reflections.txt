@@ -23,7 +23,7 @@ arquivos em um commit, enquanto outros, como o Google Docs, tratam cada arquivo 
 
 Como usar os comandos git log e git diff para visualizar o histórico dos arquivos?
 
-    Primeiramente deve-se acessar o diretório onde está armazenado o repositório usando o comando cd asteroids, em seguida deve-se digitar git log. Ao verificar quais commits se quer analisar, digita-se q para sair do log e digita-se o comando git diff mais o commit mais antigo seguido do commit mais atual.
+    Primeiramente deve-se acessar a pasta onde está o programa (p. ex. cd version-control), e criar ou clonar o repositório. Para clonar, digita-se git clone [mais a url https://github.com...]. Em seguida, deve-se acessar o diretório onde está armazenado o repositório usando o comando cd asteroids, e, depois, digitar git log. Ao verificar quais commits se quer analisar, digita-se q para sair do log e digita-se o comando git diff mais o commit mais antigo seguido do commit mais atual.
 
 De que modo o controle de versão pode dar a você mais segurança para fazer alterações que
 podem danificar algo?
