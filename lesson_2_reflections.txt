@@ -1,22 +1,36 @@
 O que acontece ao iniciar um repositório? Por que você precisa fazer isso?
 
 	Ao digitar o comando git init (no diretório escolhido), é criado o repositório, porém sem nenhum commit. É preciso fazer isso para que seja possível criar os commits.
+	Para criar um repositório optando por usar um diretório existente: deve-se acessar o diretório (cd [nome do diretório]), digitar ls -a, para visualizar os arquivos dentro dele. Em seguida, digita-se git init, que inicializa ou cria um repositório git. Digita-se ls -a novamente para ver se o repositório .git aparece. 
+
 
 Em que se difere a área de preparação do diretório de trabalho e do repositório?
 Qual valor você acha que ela oferece?
 
 	A área de preparação do diretório de trabalho serve para receber a prévia do commit, já o repositório recebe o commit consolidado, o que é importante para permitir a correção de equívocos como a adição de arquivos desnecessários, utilizando o comando GIT RESET mais o nome do arquivo.
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+Como você pode usar a área de preparação para garantir que tenha um commit por
+alteração lógica?
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+	Após alterar e salvar o arquivo, eu digito git add mais o nome do arquivo com a extensão. Em seguida eu digito o comando git diff (sem argumentos)
+	para comparar o diretório de trabalho com a área de preparação, e também o git diff --staged para comparar a área de preparação com o commit mais atual. Em seguida, executo o comando git commit e descrevo o commit.
 
-How do the diagrams help you visualize the branch structure?
+Quais são algumas das situações em que branches seriam úteis para manter seu histórico
+organizado? Como branches ajudariam?
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+	Quando eu quiser criar uma versão experimental, ou em outro idioma, ou com recursos diferentes. Basta executar o comando git branch mais o nome do novo branch, em seguida, executar git checkout mais o nome do branch. E após realizar as alterações, basta usar a área de preparação (git add arquivo.ext) e fazer o commit.
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges
-manually?
+Como os diagramas ajudam a visualizar a estrutura de branches?
+
+	Eles mostram o caminho que os commits fazem, identificando quais branches contém quais commits. E com as setas, é possível identificar cada pai, começando da direita para a esquerda.
+
+Qual é o resultado da mesclagem de dois branches? Por que o representamos
+no diagrama dessa forma?
+
+	O resultado são os commits ordenados por data de criação. Para visualizar, basta digitar git log --graph --oneline. São representados assim para melhor entendimento da sequência dos commits criados. Primeiro deve-se fazer checkout para o branch master. Em seguida, digitar o comando git merge master [e o branch a ser mesclado]. Depois, digita-se git log para ver as alterações. Para ver o que foi alterado em um commit, digita-se git show [e o ID do commit]. Assim ele mostrará a diferença entre o commit e seu pai. Se for feita alteração no diretório de trabalho, digitar git add [e o nome do arquivo] e depois git commit.
+
+Quais são os prós e contras da mesclagem automática do Git v. sempre fazer mesclagens
+manualmente?
+
+	Na mesclagem automática, ganha-se em produtividade, porém é possível que surjam conflitos. Para resolver basta abrir o arquivo que lá vai aparecer os sinais de conflitos automaticamente. Vai-se perder certo tempo resolvendo manualmente, mas permite ao programador uma segurança maior ao conferir dentro do código o que alterar ou não. Após fazer as alterações, digita-se git status, em seguida, git add [mais o nome do arquivo] e git commit.
+	Para fazer a mesclagem em branch experimental (p. ex. easy-mode), deve-se fazer checkout no easy-mode e emseguida executar git merge master easy-mode.
